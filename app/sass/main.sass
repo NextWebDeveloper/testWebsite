@@ -1,0 +1,506 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+.displayBlock
+	display: block!important
+
+.displayNone
+	display: none!important	
+
+b, strong
+	font-weight: bold
+
+button
+	outline: none!important
+	cursor: pointer
+
+a
+	color: $text
+	text-decoration: none
+	&:hover
+		color: $text
+		text-decoration: none
+
+.mainWrapper
+	display: flex
+
+.nav
+	padding: 0	60px 0 30px
+	height: 100vh
+	position: fixed
+	background-color: #fff
+	z-index: 10
+
+.nav__link
+	display: block
+	white-space: nowrap
+	padding: 5px 0
+	&:hover
+		color: darken($text, 25%)
+	
+.tasksBlock
+	margin-left: 200px
+	padding: 0 20px	
+	border-left: 1px solid $brdColor
+.task
+	height: 100vh //высота каждого задания равна высота экрана
+	&:first-child
+		margin-top: 0
+
+.showNav
+	position: fixed
+	right: 20px
+	top: 10px
+	width: 34px
+	height: 34px
+	border: 1px solid #000
+	border-radius: 4px
+	background: url('../img/menu.png') no-repeat 4px 4px
+	background-color: #fff
+	display: none
+
+
+/* Стили задания №1 начало */	
+.task-1__wrapper
+	display: flex
+
+.task-1__about
+	text-align: justify
+	margin-right: 40px
+	font-size: 15px
+
+.task-1__contactInfo
+
+.contactInfo__photo
+	width: 230px
+	margin: 0 auto
+	img
+		width: 100%				
+		height: auto
+
+.contactInfo__contacts
+	padding-top: 20px
+
+.contacts__block
+	display: flex
+	justify-content: space-between
+	height: 35px
+	align-items: center
+	border: 1px solid $brdColor
+	border-radius: 5px
+	margin-bottom: 5px
+	padding-left: 40px
+	background: url("../img/contacts-sprite.png") no-repeat -3px -8px //иконка из спрайта
+	&_telegram
+		background-position: -3px -55px
+	&_phone
+		background-position: -3px -103px
+	&_email
+		background-position: -3px -151px
+	&_vk
+		background-position: -3px -200px
+	&_fb
+		background-position: -3px -248px
+	&_linkedIn
+		background-position: -3px -296px
+
+.contacts__text
+	margin-right: 5px	
+	border: none
+	overflow: hidden
+	white-space: nowrap
+
+.contacts__copy 
+	border: none
+	border-left: 1px solid $brdColor
+	cursor: pointer
+	min-width: 40px
+	height: 100%
+	background: url("../img/copy.png") no-repeat 9px 4px /22px auto
+/* Стили задания №1 конец */
+
+/* Стили задания №2 начало */
+.registration
+	margin: 0 auto
+	max-width: 370px
+	display: flex
+	flex-direction: column
+	align-items: center
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5)
+	padding: 35px 45px 55px
+	color: #000
+	background-color: #fff
+	font-family: 'Arial'
+
+.registration__title
+	font-size: 24px
+	font-weight: 400
+
+.registration__button	//кнопки регистрации
+	width: 100%
+	border: 2px solid 
+	background-color: #fff	
+	border-radius: 3px	
+	color: #fff	
+	font-size: 18px
+	padding: 7px 0
+	cursor: pointer
+	margin-bottom: 15px
+	&_vk
+		background-color: #336699
+		border-color: #336699
+	&_fb
+		background-color: #323c89
+		border-color: #323c89
+	&_googlePlus
+		background-color: #da3d2c
+		border-color: #da3d2c
+	&_yandex
+		background-color: #fff
+		border-color: #da3d2c
+		color: #000
+		span
+			color: #da3d2c
+	&_submit
+		background-color: #52ac62
+		border-color: #52ac62
+
+.registration__buttonsHidden
+	display: none
+	
+.registration__showHidden //кнопки показа/скрытия дополнительных кнопок регистрации
+	align-self: flex-end
+	color: rgb(82, 172, 98)
+	font-size: 14px
+	background-color: transparent
+	border: none
+	padding-right: 17px
+	position: relative
+	&:before //кастомная стрелка вниз 
+		content: ''
+		position: absolute
+		display: block
+		width: 7px
+		height: 7px
+		border-bottom: 1px solid rgb(82, 172, 98)
+		border-right: 1px solid rgb(82, 172, 98)
+		right: 0px
+		top: 7px
+		transform: rotate(45deg)
+	&_hide
+		&:before
+			transform: rotate(225deg)
+			top: 11px
+
+.registration__or
+	font-size: 14px
+	color: rgb(205, 208, 212) //выглядит слишком бледно, но цвета из макета
+	margin-bottom: 8px
+	margin-top: 22px	
+
+.formReg__input
+	width: 100%
+	margin-bottom: 28px	
+	border: 1px solid rgb(229, 232, 236)	//выглядит слишком бледно, но цвета из макета
+	border-radius: 3px
+	background-color: rgb(252, 252, 252)
+	padding: 8px 15px
+	&:first-child
+		margin-bottom: 10px
+	&::placeholder
+		color: rgb(189, 194, 201)
+			
+.formReg__info
+	display: flex
+	justify-content: space-between
+	font-size: 14px
+	margin-bottom: 45px
+
+.formReg__checkboxBlock
+	font-size: 14px
+	margin: 0
+	display: flex
+	align-items: center
+/* Стилизация чекбокса	 */
+.checkboxBlock__checkbox
+	display: none //скрываем нативный чекбокс
+
+.checkboxBlock_custom //стилизуем свой чекбокс
+	position: relative
+	width: 20px           
+	height: 20px          
+	border: 1px solid rgb(85, 135, 209)
+	display: inline-block
+	vertical-align: middle
+
+.checkboxBlock_label
+	margin-left: 10px
+
+.checkboxBlock__checkbox:checked + .checkboxBlock_custom::before //стилизуем галочку
+	content: ''
+	display: block
+	position: absolute
+	width: 6px
+	height: 12px
+	top: 1px
+	left: 6px
+	border-right: 1px solid #000
+	border-bottom: 1px solid #000
+	transform: rotate(45deg)
+	
+.formReg__rememberLink
+	color: rgb(44, 136, 213)
+/* Стили задания №2 конец */
+	
+/* Стили задания №3 начало */
+.task-3__wrapper
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: #fff
+
+.task-3__button //стилизуем кнопку
+	padding: 10px 33px
+	background-color: rgb(229, 232, 236) 	
+	font-family: 'Arial'
+	font-size: 18px
+	border: 1px solid rgb(201, 206, 214)
+	border-radius: 3px
+	color: rgb(51, 51, 51)
+	position: relative
+	&:hover
+		background-color: #c9ced6
+	&:active	
+		background-color: #3366cc
+		color: #fff
+
+/* Общие стили для подсказок */
+.hint:before, .hint:after
+	position: absolute
+	transition: .4s ease-in-out
+	opacity: 0
+
+.hint:before
+	content: attr(data-hint)
+	padding: 10px
+	width: 200px
+	background-color: #000
+	color: #ffffff
+	border-radius: 5px
+	font-size: 14px
+
+.hint:after
+	content: ''
+	width: 0
+	height: 0
+	border: 10px solid transparent
+
+.hint:hover:before, .hint:hover:after
+	opacity: 1
+
+/* Стили для подсказки сверху */
+.hint_top:before
+	top: -90px
+	left: 50%
+	transform: translateX(-50%)
+
+.hint_top:after
+	border-top: 15px solid #000
+	top: -24px
+	left: 50%
+	transform: translateX(-50%)
+
+/* Стили для подсказки снизу */
+.hint_bottom:before
+	bottom: -90px
+	left: 50%
+	transform: translateX(-50%)
+
+.hint_bottom:after
+	border-bottom: 15px solid #000
+	bottom: -24px
+	left: 50%
+	transform: translateX(-50%)
+
+/* Стили для подсказки слева */
+.hint_left:before
+	top: 50%
+	transform: translateY(-50%)
+	left: -224px
+
+.hint_left:after
+	border-left: 15px solid #000
+	top: 50%
+	transform: translateY(-50%)
+	left: -24px
+
+/* Стили для подсказки справа */
+.hint_right:before
+	top: 50%
+	transform: translateY(-50%)
+	right: -224px
+
+.hint_right:after
+	border-right: 15px solid #000
+	top: 50%
+	transform: translateY(-50%)
+	right: -24px
+/* Стили задания №3 конец */
+
+/* Стили задания №4 начало */	
+.task-4__wrapper
+	width: 100%
+	height: 100%
+	background-color: #ffffff
+	display: flex
+	align-items: center
+	justify-content: center
+
+.loader
+	width: 130px
+	height: 130px
+	background-color: #3366cc	
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+	transition: all 0.5s
+
+@keyframes rotate-clockwise
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)	
+
+@keyframes rotate-anticlockwise
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(-360deg)	
+
+.loader__outer
+	position: absolute
+	width: 50px
+	height: 50px
+	border: 2px solid #fff
+	border-radius: 50%
+	border-bottom-color: transparent
+	animation: rotate-clockwise 2s linear infinite
+
+.loader__inner
+	position: absolute
+	width: 60px
+	height: 60px
+	border: 2px solid #fff
+	border-radius: 50%
+	border-left-color: transparent
+	animation: rotate-anticlockwise 2s linear infinite
+	
+.loader:hover
+	background-color: red
+	transform: scale(2)
+	border-radius: 50%
+	// animation: rotate-clockwise 2s linear infinite
+	.loader__outer
+		animation-duration: 0.7s
+	.loader__inner
+		animation-duration: 0.7s
+/* Стили задания №4 конец */
+
+/* Стили задания №5 начало */	
+.wishList
+	max-width: 480px
+	
+.wishList__input
+	padding: 3px 10px
+	border: 1px solid $brdColor
+	border-radius: 7px
+	display: block
+	width: 100%
+	margin-bottom: 10px
+
+.wishList__button
+	padding: 4px 33px
+	background-color: rgb(229, 232, 236) 	
+	font-family: 'Arial'
+	font-size: 18px
+	border: 1px solid rgb(201, 206, 214)
+	border-radius: 3px
+	color: rgb(51, 51, 51)
+	margin-bottom: 20px
+	&:hover
+		background-color: #c9ced6
+	&:active	
+		background-color: #3366cc
+		color: #fff	
+
+.wishList_title
+	text-align: center
+	font-size: 20px
+
+.wishList__wish
+	width: 100%
+	display: flex
+	justify-content: space-between
+	margin-bottom: 10px
+	
+.wishList__buttonsWrapper	
+	display: flex
+
+.wishList__wish-button
+	height: 100%
+	width: 25px
+	border: none
+	background-color: transparent
+	&:last-child
+		margin-left: 5px
+	&_done
+		background: url('../img/check.png') no-repeat	
+	&_delete
+		background: url('../img/rubbish-bin.png') no-repeat
+
+.wishDone
+	color: #aaa
+	text-decoration: line-through	
+/* Стили задания №5 конец */		
+
+@import "media" // Always at the end
+
+
+

@@ -1,0 +1,49 @@
+@import "vars"
+
+
+@media only screen and (max-width:1024px)
+	.nav, .nav__title
+		display: none
+
+	.showNav
+		display: block
+
+	.nav
+		height: auto
+		top: 48px
+		right: 10px	
+		border: 2px solid $brdColor	
+		padding: 0 30px
+
+	.nav__link
+		border-bottom: 1px solid $brdColor
+		&:last-child
+			border: none	
+
+	.task
+		height: auto
+		margin-top: 40px
+	
+	.task-1
+		margin-top: 0
+
+	.tasksBlock
+		margin: 0	
+
+	.task-1__wrapper
+		flex-direction: column-reverse
+
+	.task-1__about
+		margin: 0
+
+	.contacts__text
+		width: 100%
+		min-width: 100px		
+
+	.task-1__contactInfo
+		margin-bottom: 20px
+
+	.task-3__wrapper, .task-4__wrapper
+		padding: 80px 0 50px	
+
+	

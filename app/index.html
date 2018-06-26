@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>test ukit Group</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	
+	<div class="mainWrapper">
+		<!-- Блок навигации -->
+		<div class="nav">
+			<h3 class="nav__title">Меню</h3>
+			<nav class="nav__mainNav">
+				<a href="#task-1" class="nav__link">Задание 1</a>
+				<a href="#task-2" class="nav__link">Задание 2</a>
+				<a href="#task-3" class="nav__link">Задание 3</a>
+				<a href="#task-4" class="nav__link">Задание 4</a>
+				<a href="#task-5" class="nav__link">Задание 5</a>
+			</nav>
+		</div>
+		<!-- Блок заданий -->
+		<main class="tasksBlock">
+			<button class="showNav"></button>
+			<!-- Задание №1 -->
+			<section class="task task-1" id="task-1">
+				<h2 class="task__title">Задание 1</h2>
+				<div class="task-1__wrapper">
+						<p class="task-1__about">
+							Добрый день. <br>
+							Этот текст, хотя он и стоит в самом начале, я оставил самым последним для написания. Сейчас почти 3 ночи и я заканчиваю вёрстку. В задании было сказано написать о себе, если кратко то родился я в Мурманске и жил там всё время. В Санкт-Петербурге переехал три дня назад. После почти 5 лет работы инженером, и осознания, что это не то, чем я хочу заниматься дальше, я чётко решил строить карьеру в программирование и во фронтэнде в частности. Всё своё время я посвящаю только этому, осознавая что в 28 лет мне придётся трудиться в 2, в 3 раза больше, чтобы догнать тех кто начал гораздо раньше чем я, но я к этому готов.<br> 
+							Что я умею и знаю на данный момент? Я умею верстать, стараюсь использовать семантику HTML5, методологию БЭМ в частности именования классов, в качестве препроцессора стилей - Sass(но экспериментировал и с SCSS и с Less), пользуюсь git, умею обращаться с макетами PSD и обещаю не тревожить дизайнера каждые полчаса. Знаю английский на хорошем среднем уровне. Умею искать и находить нужную информацию в интернете. Использую npm/bower, а так же для сборки проекта в единое целое Gulp. Могу верстать адаптивно с Bootstrap (использую 4 версию) и без него. Активно применяю сторонние библиотеки js(в данном тестовом задании например использовал clipboard.js). Пишу свои несложные скрипты на JQuery. В качестве редактора использую Visual Studio Code.<br>
+							Откровенно о минусах по итогам вёрстки:<br>
+							-не уложился в максимально отведённые 60 минут<br>
+							-всплывающее меню на маленьких экранах выглядит не очень привлекательно.<br>
+							-в задании №5 при нажатии на кнопку добавления желания экран улетает в самое начало<br>
+							-хотя в задании было рекомендовано использовать нативный js скрипты написал на JQuery
+						</p>
+					<div class="task-1__contactInfo">
+						<div class="contactInfo__photo">
+							<img src="img/photo.jpg" alt="Dmitry Toshchev photo">
+						</div>
+						<!-- Общий блок контактов. Кнопка в каждом контакте позволяет скопировать контакт в буфер обмена. Реализовано на clipboard.js -->
+						<div class="contactInfo__contacts">
+							<div class="contacts__block contacts__block_skype">
+								<input id="copy-skype" class="contacts__text" value="+79633619371">
+								<button data-clipboard-target="#copy-skype" class="contacts__copy"></button>
+							</div>
+							<div class="contacts__block contacts__block_telegram">
+								<input id="copy-telegram" class="contacts__text" value="@Dima_Nord">
+								<button data-clipboard-target="#copy-telegram" class="contacts__copy"></button>
+							</div>
+							<div class="contacts__block contacts__block_phone">
+								<input id="copy-phone" class="contacts__text" value="+7-963-361-93-71">
+								<button data-clipboard-target="#copy-phone" class="contacts__copy"></button>
+							</div>
+							<div class="contacts__block contacts__block_email">
+								<input id="copy-email" class="contacts__text" value="dt.webwork@gmail.com">
+								<button data-clipboard-target="#copy-email" class="contacts__copy"></button>
+								</div>
+							<div class="contacts__block contacts__block_vk">
+								<input id="copy-vk" class="contacts__text" value="https://vk.com/id16689406">
+								<button data-clipboard-target="#copy-vk" class="contacts__copy"></button>
+							</div>
+							<div class="contacts__block contacts__block_fb">
+								<input id="copy-fb" class="contacts__text" value="https://www.facebook.com/profile.php?id=100011427838572">
+								<button data-clipboard-target="#copy-fb" class="contacts__copy"></button>
+							</div>
+							<div class="contacts__block contacts__block_linkedIn">
+								<input id="copy-linkedIn" class="contacts__text" value="https://linkedin.com/in/dmitry-toshchev-4baa39165">
+								<button data-clipboard-target="#copy-linkedIn" class="contacts__copy"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Задание №2 -->
+			<section class="task task-2" id="task-2">
+				<h2 class="task__title">Задание 2</h2>
+				<div class="registration">
+					<h4 class="registration__title">Регистрация</h4>
+					<button class="registration__button registration__button_vk">Регистрация из Вконтакте</button>
+					<button class="registration__button registration__button_fb">Регистрация из Facebook</button>
+					<div class="registration__buttonsHidden">
+						<button class="registration__button registration__button_googlePlus">Регистрация из Google Plus</button>
+						<button class="registration__button registration__button_yandex">Регистрация из <span>Яндекс</span></button>
+					</div>
+					<button class="registration__showHidden registration__showHidden_show">Другие</button>
+					<button class="registration__showHidden registration__showHidden_hide displayNone">Скрыть</button>
+					<p class="registration__or">или</p>
+					<form action="#" class="registration__formReg">
+						<input class="formReg__input" type="text" placeholder="Ваш логин или E-mail">
+						<input class="formReg__input" type="text" placeholder="Пароль">
+						<div class="formReg__info">
+							<label class="formReg__checkboxBlock">
+								<input type="checkbox" class="checkboxBlock__checkbox" checked>
+								<span class="checkboxBlock_custom"></span>						
+								<span class="checkboxBlock_label">Запомнить меня</span>
+							</label>
+							<a class="formReg__rememberLink" href="#">забыли пароль?</a>
+						</div>
+					</form>
+					<button class="registration__button registration__button_submit">Зарегистрироваться</button>
+				</div>
+			</section>
+			<!-- Задание №3 -->
+			<section class="task task-3" id="task-3">
+				<h2 class="task__title">Задание 3</h2>
+				<div class="task-3__wrapper">
+					<!-- Используйте классы .hint_top, .hint_bottom, .hint_right, .hint_left для указания стороны всплывания подсказки. По умолчанию использован класс .hint_top -->
+					<button class="task-3__button hint hint_top" data-hint="Чтобы войти в систему кликните на кнопку">Войти в систему</button>
+				</div>
+			</section>
+			<section class="task task-4" id="task-4">
+				<h2 class="task__title">Задание 4</h2>
+				<div class="task-4__wrapper">
+					<div class="loader">
+						<div class="loader__outer"></div>
+						<div class="loader__inner"></div>
+					</div>
+				</div>
+			</section>
+			<section class="task task-5" id="task-5">
+				<h2 class="task__title">Задание 5</h2>
+				<div class="wishList">
+					<form action="#">
+						<input type="text" class="wishList__input" placeholder="Enter your wish">
+						<button class="wishList__button">Add to list</button>
+					</form>
+					<div class="wishList_list">
+						<h4 class="wishList_title">Your wish list</h4>
+						<div class="wishList__wish">
+							<strong>Learn Javascript!</strong>
+							<div class="wishList__buttonsWrapper">
+								<button class="wishList__wish-button wishList__wish-button_done"></button>
+								<button class="wishList__wish-button wishList__wish-button_delete"></button>
+							</div>
+						</div>
+						<div class="wishList__wish">
+							<strong>Learn React/Vue</strong>
+							<div class="wishList__buttonsWrapper">
+								<button class="wishList__wish-button wishList__wish-button_done"></button>
+								<button class="wishList__wish-button wishList__wish-button_delete"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+
+	</div>
+
+	<script src="libs/clipboard.js/dist/clipboard.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
+
+
